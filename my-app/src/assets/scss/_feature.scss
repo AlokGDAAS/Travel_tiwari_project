@@ -1,0 +1,281 @@
+@use 'rs';
+
+.top-feature-card {
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 100%;
+
+    @media #{rs.$bp-sm} {
+        flex-wrap: nowrap;
+    }
+
+    @media #{rs.$bp-xxl} {
+        padding: 40px;
+    }
+
+    .top-feature-img {
+        border-radius: 18px;
+
+        img {
+            border-radius: 18px;
+        }
+    }
+
+    .top-feature-content {
+        flex: 0 0 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media #{rs.$bp-sm} {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        @media #{rs.$bp-md} {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        @media #{rs.$bp-lg} {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        @media #{rs.$bp-xxl} {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &.style-two {
+        position: relative;
+        z-index: 1;
+        background-color: var(--primary);
+        border-color: var(--primary);
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            border-radius: 18px;
+            border: 1px solid rgba(247, 247, 247, 0.50);
+            z-index: -1;
+        }
+
+        h2 {
+            color: var(--white);
+            font-size: clamp(32px, 5vw, 80px);
+        }
+
+        p {
+            color: var(--text-two);
+        }
+    }
+}
+
+.students-imgs {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+
+        @media #{rs.$bp-xxl} {
+            width: 55px;
+            height: 55px;
+        }
+
+        &:not(:first-child) {
+            margin-left: -20px;
+        }
+    }
+}
+
+.package-card {
+    border-radius: 18px;
+    background: var(--white);
+
+    .package-img {
+        position: relative;
+        border-radius: 18px 18px 0 0;
+
+        img {
+            width: 100%;
+            border-radius: 18px 18px 0 0;
+        }
+
+        .featured-badge {
+            border-radius: 0 30px 30px 0;
+            background: #02A5CE;
+            color: var(--white);
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 32px;
+            height: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            position: absolute;
+            top: 26px;
+            left: 0;
+            z-index: 10;
+        }
+
+        .wishlist-btn {
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 10;
+            background-color: var(--white);
+            color: var(--heading);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 20px;
+
+            &:hover,
+            &:focus {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }
+
+        .place-time {
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: calc(100% - 40px);
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 0;
+            z-index: 100;
+            background-color: var(--heading);
+            height: 40px;
+            border-radius: 30px 30px 0 0;
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 10px;
+            color: var(--white);
+
+            @media #{rs.$bp-sm} {
+                gap: 12px;
+                font-size: 12px;
+            }
+
+            .line {
+                width: 1px;
+                height: 20px;
+                background-color: var(--white);
+                opacity: 0.5;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .package-content {
+        padding: 24px;
+
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            color: var(--warning);
+        }
+
+        .package-title {
+            font-size: clamp(18px, 2vw, 24px);
+            color: var(--heading);
+            font-weight: 700;
+            display: block;
+
+            &:hover,
+            &:focus {
+                color: var(--primary);
+            }
+        }
+
+        h5 {
+            color: var(--text);
+
+            span {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .package-img {
+            .place-time {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.packages-swiper {
+    width: 110%;
+    left: -5%;
+}
+
+.packages-swiper-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .line {
+        width: calc(50% - 74px);
+        height: 1px;
+        background-color: var(--text);
+        flex-shrink: 0;
+    }
+
+    .packages-button-prev,
+    .packages-button-next {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid var(--text);
+        background-color: var(--white);
+        color: var(--heading);
+        font-size: 24px;
+        transition: var(--transition);
+
+        &:hover,
+        &:focus {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+    }
+}

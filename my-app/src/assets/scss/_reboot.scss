@@ -1,0 +1,259 @@
+@use 'rs';
+
+/* Reboot CSS */
+
+:root {
+    --transition: all 350ms ease;
+    --font-primary: "Manrope", sans-serif;
+    --font-montez: "Montez", cursive;
+    --font-tabler: "tabler-icons";
+    --primary: #3CB371;
+    --primary-hover: #161922;
+    --primary-100: rgba(60, 179, 113, 0.10);
+    --secondary: #EFEFEF;
+    --heading: #161920;
+    --text: #767676;
+    --text-hover: #585B6F;
+    --text-two: #535B5F;
+    --border: rgba(118, 118, 118, 0.30);
+    --bg: #222222;
+    --gray: #F7F5F2;
+    --white: #FFFFFF;
+    --white-200: rgba(255, 255, 255, 0.2);
+    --white-300: rgba(255, 255, 255, 0.3);
+    --white-500: rgba(255, 255, 255, 0.5);
+    --success: #3CB371;
+    --success-hover: #161922;
+    --warning: #F7921F;
+    --warning-hover: #141414;
+    --info: #02A5CE;
+    --info-hover: #113d48;
+    --danger: #DC3545;
+    --danger-hover: #bb1828;
+}
+
+html[data-theme="two"] {
+    --primary: #02A5CE;
+    --primary-hover: #113d48;
+    --primary-100: rgba(2, 165, 206, 0.10);
+    --secondary: #F3F6FD;
+    --heading: #1C3637;
+    --text: #767676;
+    --text-hover: #585B6F;
+    --text-two: #F3F6FD;
+    --border: rgba(28, 54, 55, 0.25);
+}
+
+html[data-theme="three"] {
+    --primary: #F7921F;
+    --primary-hover: #141414;
+    --primary-100: rgba(247, 146, 31, 0.15);
+    --secondary: #F7F5F2;
+    --heading: #141414;
+    --text: #535B5F;
+    --text-hover: #585B6F;
+    --text-two: #535B5F;
+    --border: rgba(83, 91, 95, 0.30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: var(--text);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 0 !important;
+    font-family: var(--font-primary);
+}
+
+.ff-montez {
+    font-family: var(--font-montez) !important;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: var(--heading);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    letter-spacing: -1px;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.67;
+    color: var(--text);
+}
+
+a,
+a:hover,
+a:focus {
+    transition-duration: 350ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    color: var(--heading);
+}
+
+ul,
+ol {
+    margin-bottom: 0;
+
+    li {
+        line-height: 1.75;
+    }
+}
+
+.border,
+.border-end,
+.border-start,
+.border-top,
+.border-bottom {
+    border-color: rgba(38, 38, 41, 0.30) !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:required,
+textarea:required,
+input:invalid,
+textarea:invalid {
+    box-shadow: none !important;
+}
+
+.bg-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+}
+
+// Container
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 320px;
+}
+
+@media (min-width:400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 360px;
+    }
+}
+
+@media (min-width:480px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 420px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}

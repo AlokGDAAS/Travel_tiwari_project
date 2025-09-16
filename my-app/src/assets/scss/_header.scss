@@ -1,0 +1,914 @@
+@use 'rs';
+
+/* Header CSS */
+
+.offcanvas-icon {
+   width: 42px;
+   height: 42px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0;
+   border-radius: 50%;
+   border: 1px solid var(--heading);
+   transition: var(--transition);
+   flex-shrink: 0;
+   cursor: pointer;
+
+   @media #{rs.$bp-xl} {
+      width: 52px;
+      height: 52px;
+   }
+
+   svg {
+      path {
+         fill: var(--heading);
+         transition: var(--transition);
+      }
+   }
+
+   &:hover,
+   &:focus {
+      border-color: var(--primary);
+
+      svg {
+         path {
+            fill: var(--primary);
+         }
+      }
+   }
+}
+
+.header-search-btn {
+   .btn {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid var(--heading);
+      transition: var(--transition);
+
+      @media #{rs.$bp-xl} {
+         width: 52px;
+         height: 52px;
+      }
+
+      svg {
+         path {
+            stroke: var(--heading);
+            transition: var(--transition);
+         }
+      }
+
+      &:hover,
+      &:focus {
+         border-color: var(--primary);
+
+         svg {
+            path {
+               stroke: var(--primary);
+            }
+         }
+      }
+   }
+}
+
+.header-navigation {
+   @media #{rs.$bp-xl} {
+      margin-left: 2rem;
+   }
+
+   @media #{rs.$bp-xxl} {
+      margin-left: 4rem;
+   }
+}
+
+.sideMenuButton {
+   width: 60px;
+   height: 60px;
+   border-radius: 6px;
+   min-width: 50px;
+   padding: 0;
+   background-color: var(--primary);
+
+   &:hover,
+   &:focus {
+      svg {
+         path {
+            stroke: var(--white);
+         }
+      }
+   }
+}
+
+.right-side-touria-offcanvas {
+   width: 320px !important;
+   background-color: var(--white);
+
+   @media #{rs.$bp-sm} {
+      width: 450px !important;
+   }
+
+   @media #{rs.$bp-xl} {
+      width: 500px !important;
+   }
+
+   .offcanvas-header {
+      height: 110px;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: var(--gray);
+
+      @media #{rs.$bp-sm} {
+         padding-left: 40px;
+         padding-right: 40px;
+      }
+
+      .btn-close {
+         width: 40px;
+         height: 40px;
+         padding: 0;
+         margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 6px;
+         transition: var(--transition);
+         border: 1px solid var(--border);
+      }
+   }
+
+   .offcanvas-body {
+      padding: 40px 20px;
+      scrollbar-width: thin;
+
+      @media #{rs.$bp-sm} {
+         padding: 60px 40px;
+      }
+   }
+}
+
+.header-area {
+   background-color: transparent;
+   transition: var(--transition);
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+
+   @media #{rs.$bp-xl} {
+      box-shadow: none;
+   }
+
+   &.mobile-menu-open {
+      background-color: var(--white);
+   }
+
+   .navbar-toggler {
+      padding: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      color: var(--heading);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+
+      &:focus {
+         box-shadow: none;
+      }
+   }
+
+   .navbar {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      transition: var(--transition);
+
+      @media #{rs.$bp-xl} {
+         height: 100px;
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+
+      .navbar-brand {
+         margin-right: 2rem;
+         line-height: 1 !important;
+      }
+   }
+
+   .navbar-nav {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @media #{rs.$bp-xl} {
+         margin-top: 0;
+         margin-bottom: 0;
+         gap: 20px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         gap: 42px;
+      }
+
+      li {
+         >a {
+            display: inline-block;
+            color: var(--heading);
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: capitalize;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            i {
+               margin-top: 3px;
+            }
+
+            @media #{rs.$bp-xl} {
+               padding-top: 1.5rem;
+               padding-bottom: 1.5rem;
+            }
+
+            &:hover,
+            &:focus {
+               color: var(--primary);
+            }
+         }
+
+         .touria-dd-menu {
+            list-style: none;
+            background-color: transparent;
+            position: relative;
+            z-index: 100;
+            top: 100%;
+            width: 100%;
+            border: 0;
+            border-radius: .5rem;
+            display: none;
+            padding-left: 0;
+
+            @media #{rs.$bp-xl} {
+               padding: 1rem 0;
+               transition: var(--transition);
+               position: absolute;
+               top: calc(100% + 8px);
+               width: 15rem;
+               background-color: var(--secondary);
+               visibility: hidden;
+               opacity: 0;
+               display: block;
+               left: -1rem;
+               border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            li>a {
+               transition: var(--transition);
+               position: relative;
+               font-size: 1rem;
+               padding: .375rem 1rem;
+               color: var(--heading);
+               text-transform: capitalize;
+               align-items: center;
+               justify-content: space-between;
+
+               @media #{rs.$bp-xl} {
+                  padding: .375rem 1.5rem;
+               }
+
+               &:hover,
+               &:focus {
+                  background-color: transparent;
+                  color: var(--primary);
+
+                  @media #{rs.$bp-xl} {
+                     color: var(--primary);
+                  }
+               }
+            }
+         }
+
+         &.touria-dd {
+            position: relative;
+            z-index: 1;
+
+            .dropdown-toggler {
+               position: absolute;
+               width: 100%;
+               height: 36px;
+               z-index: 100;
+               background-color: transparent;
+               color: var(--primary);
+               top: 2px;
+               cursor: pointer;
+               left: 0;
+               display: flex;
+               align-items: center;
+               justify-content: flex-end;
+               font-size: 14px;
+
+               @media #{rs.$bp-xl} {
+                  display: none;
+               }
+            }
+
+            >a {
+               position: relative;
+            }
+
+            &:hover,
+            &:focus {
+
+               >a {
+                  color: var(--primary);
+               }
+
+               @media #{rs.$bp-xl} {
+                  .touria-dd-menu {
+                     visibility: visible;
+                     opacity: 1;
+                     top: 100%;
+                  }
+               }
+            }
+
+            .touria-dd {
+               .dropdown-toggler {
+                  right: 1rem;
+               }
+
+               >a {
+                  position: relative;
+                  width: 100%;
+               }
+
+               .touria-dd-menu {
+                  display: none;
+                  padding-left: 1rem;
+
+                  @media #{rs.$bp-xl} {
+                     margin-left: .25rem;
+                     top: -8px;
+                     left: 100%;
+                     visibility: hidden;
+                     opacity: 0;
+                     display: block;
+                     padding-left: 0;
+                  }
+               }
+
+               &:hover,
+               &:focus {
+
+                  @media #{rs.$bp-xl} {
+                     .touria-dd-menu {
+                        visibility: visible;
+                        opacity: 1;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &.sticky-on {
+      background-color: var(--white);
+      box-shadow: 0px 30px 42px 0px rgba(33, 39, 37, 0.1);
+
+      .navbar {
+         @media #{rs.$bp-xl} {
+            height: 85px;
+         }
+      }
+   }
+
+   &.style-two {
+      background-color: var(--white);
+
+      .header-top {
+         width: 100%;
+         height: 48px;
+         transition-duration: 350ms;
+         border-bottom: 1px solid rgba(28, 54, 55, 0.25);
+
+         .left-side {
+            .vr-line {
+               width: 1px;
+               height: 18px;
+               background-color: var(--heading);
+               flex-shrink: 0;
+            }
+
+            i {
+               color: var(--heading);
+               font-size: 20px;
+            }
+
+            span {
+               color: var(--heading);
+               font-weight: 500;
+            }
+         }
+      }
+
+      .navbar {
+         background-color: var(--white);
+         transition-duration: 350ms;
+
+         @media #{rs.$bp-xl} {
+            height: 100px;
+         }
+
+         .navbar-brand {
+            @media #{rs.$bp-lg} {
+               margin-right: 50px;
+            }
+
+            @media #{rs.$bp-xl} {
+               margin-right: 120px;
+            }
+         }
+      }
+
+      .navbar-toggler {
+         color: var(--heading);
+      }
+
+      .social-nav {
+         a {
+            color: var(--heading);
+            font-size: 16px;
+            transform: all 350ms;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            i {
+               font-size: 18px;
+            }
+
+            &:hover,
+            &:focus {
+               color: var(--primary);
+            }
+         }
+
+         &.style-two {
+            a {
+               border: 1.258px solid var(--text-two);
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 14px;
+               color: var(--text-two);
+               transition: var(--transition);
+
+               &:hover,
+               &:focus {
+                  color: var(--white);
+                  background-color: var(--primary);
+                  border-color: var(--primary);
+               }
+            }
+         }
+      }
+
+      .offcanvas-icon {
+         border: 1px solid var(--heading);
+
+         svg {
+            path {
+               fill: var(--heading);
+            }
+         }
+
+         &:hover,
+         &:focus {
+            border-color: var(--primary);
+
+            svg {
+               path {
+                  fill: var(--primary);
+               }
+            }
+         }
+      }
+
+      .header-search-btn {
+         .btn {
+            border: 1px solid var(--heading);
+
+            svg {
+               path {
+                  stroke: var(--heading);
+               }
+            }
+
+            &:hover,
+            &:focus {
+               border-color: var(--primary);
+
+               svg {
+                  path {
+                     stroke: var(--primary);
+                  }
+               }
+            }
+         }
+      }
+
+      &.sticky-on {
+         background-color: var(--white);
+
+         .header-top {
+            height: 40px;
+            background-color: transparent;
+         }
+
+         .navbar {
+            @media #{rs.$bp-xl} {
+               height: 80px;
+            }
+         }
+      }
+   }
+
+   &.style-three {
+      top: 28px;
+      box-shadow: none;
+      padding-left: 2%;
+      padding-right: 2%;
+
+      &::after {
+         display: none;
+      }
+
+      &.mobile-menu-open {
+         background-color: transparent;
+      }
+
+      .navbar {
+         background-color: var(--white);
+         padding-left: 1rem;
+         padding-right: 1rem;
+         border-radius: 1rem;
+         border: 1px solid var(--white);
+
+         @media #{rs.$bp-xl} {
+            height: 100px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 5rem;
+         }
+      }
+
+      .navbar-nav {
+         li {
+            >a {
+               color: var(--heading);
+
+               &:hover,
+               &:focus {
+                  color: var(--primary);
+               }
+            }
+
+            .touria-dd-menu {
+               background-color: transparent;
+
+               @media #{rs.$bp-xl} {
+                  background-color: var(--secondary);
+                  border: 0;
+               }
+
+               li>a {
+                  color: var(--heading);
+
+                  &:hover,
+                  &:focus {
+                     background-color: transparent;
+                     color: var(--primary);
+                  }
+               }
+            }
+
+            &.touria-dd {
+
+               &:hover,
+               &:focus {
+                  >a {
+                     color: var(--primary);
+                  }
+               }
+
+               .dropdown-toggler {
+                  background-color: transparent;
+                  color: var(--primary);
+               }
+            }
+         }
+      }
+
+      &.sticky-on {
+         box-shadow: none;
+         background-color: transparent;
+
+         .navbar {
+            background-color: var(--white);
+            box-shadow: 0px 30px 42px 0px rgba(33, 39, 37, 0.1);
+            border: 1px solid rgba(247, 247, 247, 0.1);
+
+            @media #{rs.$bp-xl} {
+               height: 80px;
+            }
+         }
+      }
+   }
+
+   &.style-four {
+      .header-top {
+         padding-left: 2%;
+         padding-right: 2%;
+      }
+
+      .navbar {
+         position: relative;
+         z-index: 1;
+         padding-left: 2%;
+         padding-right: 2%;
+
+         .logo-shape {
+            transition: var(--transition);
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 320px;
+            height: 74px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+
+            @media #{rs.$bp-xl} {
+               width: 384px;
+               height: 100px;
+            }
+         }
+      }
+
+      .navbar-nav {
+         li {
+            >a {
+               color: var(--heading);
+
+               &:hover,
+               &:focus {
+                  color: var(--primary);
+               }
+            }
+
+            .touria-dd-menu {
+               background-color: transparent;
+
+               @media #{rs.$bp-xl} {
+                  background-color: var(--secondary);
+                  border: 0;
+               }
+
+               li>a {
+                  color: var(--heading);
+
+                  &:hover,
+                  &:focus {
+                     background-color: transparent;
+                     color: var(--primary);
+                  }
+               }
+            }
+
+            &.touria-dd {
+
+               &:hover,
+               &:focus {
+                  >a {
+                     color: var(--primary);
+                  }
+               }
+
+               .dropdown-toggler {
+                  background-color: transparent;
+                  color: var(--primary);
+               }
+            }
+         }
+      }
+
+      .offcanvas-icon {
+         border: 1px solid rgba(20, 20, 20, 0.20);
+         background-color: var(--secondary);
+
+         svg {
+            path {
+               fill: var(--primary-hover);
+            }
+         }
+
+         &:hover,
+         &:focus {
+            border-color: var(--primary);
+
+            svg {
+               path {
+                  fill: var(--primary);
+               }
+            }
+         }
+      }
+
+      .header-search-btn {
+         .btn {
+            border: 1px solid rgba(20, 20, 20, 0.20);
+            background-color: var(--secondary);
+
+            svg {
+               path {
+                  stroke: var(--primary-hover);
+               }
+            }
+
+            &:hover,
+            &:focus {
+               border-color: var(--primary);
+
+               svg {
+                  path {
+                     stroke: var(--primary);
+                  }
+               }
+            }
+         }
+      }
+
+      &.sticky-on {
+         .navbar {
+            .logo-shape {
+               top: 0;
+               left: -50px;
+               width: 320px;
+               height: 74px;
+
+               @media #{rs.$bp-xl} {
+                  width: 384px;
+                  height: 80px;
+               }
+            }
+         }
+      }
+   }
+
+   &.style-five {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &.mobile-menu-open {
+         background-color: var(--heading);
+      }
+
+      .header-search-btn .btn {
+         border: 1px solid var(--white);
+         background-color: var(--white);
+      }
+
+      .offcanvas-icon {
+         border: 1px solid var(--white);
+         background-color: var(--white);
+      }
+
+      .navbar-toggler {
+         color: var(--white);
+         border: 1px solid var(--text-two);
+      }
+
+      .navbar-nav {
+         li {
+            >a {
+               color: var(--white);
+
+               &:hover,
+               &:focus {
+                  color: var(--primary);
+               }
+            }
+
+            .touria-dd-menu {
+
+               @media #{rs.$bp-xl} {
+                  background-color: var(--secondary);
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+               }
+
+               li>a {
+                  color: var(--heading);
+
+                  &:hover,
+                  &:focus {
+                     background-color: transparent;
+                     color: var(--primary);
+                  }
+               }
+            }
+
+            &.touria-dd {
+
+               .dropdown-toggler {
+                  background-color: transparent;
+                  color: var(--primary);
+               }
+
+               &:hover,
+               &:focus {
+
+                  >a {
+                     color: var(--primary);
+                  }
+               }
+            }
+         }
+      }
+
+      .navbar-nav li .touria-dd-menu {
+         background-color: var(--white);
+      }
+
+      &.sticky-on {
+         background-color: var(--heading);
+         border-bottom: 1px solid transparent;
+      }
+   }
+}
+
+@media #{rs.$bp-lg} {
+   .touria-dd-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 350ms ease, transform 350ms ease;
+
+      li {
+         opacity: 0;
+         transform: translateY(10px);
+         transition: opacity 350ms ease, transform 350ms ease;
+      }
+   }
+
+   .touria-dd:hover {
+      .touria-dd-menu {
+         opacity: 1;
+         visibility: visible;
+         transform: translateY(0);
+
+         li {
+            opacity: 1;
+            transform: translateY(0);
+         }
+
+         @for $i from 1 through 20 {
+            li:nth-child(#{$i}) {
+               transition-delay: #{$i * 100}ms;
+            }
+         }
+      }
+   }
+}
+
+.navbar-nav-scroll {
+   max-height: 50vh;
+}
+
+.header-four {
+   .collapse {
+      justify-content: space-between !important;
+   }
+
+   .header-navigation {
+      margin-left: 0 !important;
+   }
+
+   .navbar-brand {
+      margin-left: 50px;
+
+      @media screen and (max-width: 1699px) {
+         margin-left: 0;
+      }
+   }
+}

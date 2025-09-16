@@ -1,0 +1,108 @@
+@use 'rs';
+
+/* Flight CSS */
+
+.flight-card {
+    transition: var(--transition);
+
+    .flight-img {
+        position: relative;
+        border-radius: 18px;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            color: var(--white);
+            padding: 10px 14px;
+            border-radius: 20rem;
+            z-index: 10;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .flight-price {
+        display: flex;
+        align-items: baseline;
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text);
+        }
+    }
+
+    a {
+        display: block;
+        border-radius: 5px;
+        border: 1px solid rgba(28, 54, 55, 0.25);
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 18px;
+        transition: var(--transition);
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        transform: translateY(-8px);
+    }
+}
+
+.travel-deals-card {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+
+    img {
+        width: 100%;
+        border-radius: 18px;
+        transition: var(--transition);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(28, 54, 55, 0.00) 0%, #1C3637 100%);
+        z-index: 1;
+    }
+
+    .travel-deals-content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        width: calc(100% - 48px);
+        z-index: 10;
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}

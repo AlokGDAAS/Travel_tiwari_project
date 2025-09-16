@@ -1,0 +1,21 @@
+
+
+
+
+
+@media (min-width:768px) {
+
+.overlay_o{
+     background: radial-gradient(circle 200px at 45% -5%, rgba(255, 255, 255, 0.53) ,transparent 70%)
+}
+     
+}
+
+
+@media (max-width:767px) {
+
+.overlay_o{
+     background: radial-gradient(circle 100px at 45% -5%, rgba(255, 255, 255, 0.53) ,transparent 70%)
+}
+     
+}
