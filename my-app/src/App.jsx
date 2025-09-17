@@ -1,23 +1,20 @@
-import './App.css'
-import { assets } from './assets/assets'
-import './assets/css/fonts.css'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
+import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
 
 function App() {
-
-
   return (
-    <>
-    <div className=''>
-      <Navbar/>
-      <Home/>
-      <Footer/>      
+    <div>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <Navbar />
+          <Home />
+          <Footer />
+        </div>
+      </div>
     </div>
-    
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

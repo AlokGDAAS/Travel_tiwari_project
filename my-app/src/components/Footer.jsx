@@ -1,152 +1,197 @@
 import React from 'react'
-import { BsFillGeoAltFill } from "react-icons/bs";
-import { MdPhone } from "react-icons/md";
-import { MdMail } from "react-icons/md";
-import { assets } from '../assets/assets';
+import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div className="bg-black/95 text-white font_16  bg-[url('/plane2.png'),url('/tree.png')]  bg-[position:left_center,right_center]   bg-no-repeat m_font_16">
-        <div className=' pt-[10vw] px-[10vw]'>
-          {/* contacts */}
-          <div className='flex md:flex-row flex-col justify-between pb-[8vw] gap-[6vw] md:gap-0' >
-            {/* Location */}
-          <div className='flex items-center gap-[8vw] md:gap-[2vw] '>
-             <div className='md:p-[2vw] p-[6vw] bg-white/20 rounded-full font_20 m_font_16'><BsFillGeoAltFill/></div>
-             <div>
-              <h1 className='font_24 font-bold mb-[0.5vw] m_font_21'>Location</h1>
-              <p className='mb-[0.25vw]'>66 Brooklyn golden<br/></p>
-               <p className=''>street line NY, USA</p>
+    <div>
             
-             </div>
-          </div>
-          <div class="border-l border-gray-500 h-24 mx-3 py-2 hidden md:block"></div>
-            {/* Phone */}
-          <div className='flex items-center gap-[8vw] md:gap-[2vw]  '>
-             <div className='md:p-[2vw] p-[6vw] bg-white/20 rounded-full font_24 m_font_20'><MdPhone/></div>
-             <div>
-              <h1 className='font_24 font-bold  mb-[0.5vw] m_font_21'>Phone</h1>
-              <p className=' mb-[0.25vw]'>+869-868-08-68</p>
-              <p className=''>+869-868-08-68</p>
-            
-             </div>
-          </div>
-          <div class="border-l border-gray-500 h-24 mx-3 py-2 hidden md:block"></div>
-            {/* Email */}
-          <div className='flex items-center gap-[8vw] md:gap-[2vw]'>
-             <div className='md:p-[2vw] p-[6vw] bg-white/20 rounded-full font_24 m_font_20'><MdMail/></div>
-             <div>
-              <h1 className='font_24 font-bold  mb-[0.5vw] m_font_21'>Mail Us</h1>
-              <p className='mb-[0.25vw]'>touria@support.com</p>
-              <p className=''>touria@support.com</p>
-            
-             </div>
-          </div>
-          </div>
+         <div className="footer-wrapper jarallax" style={{backgroundImage:"url('/35.jpg')"}} >
+        
+            <img className="plane-img" src="/plane2.png" alt=""/>
 
-          <hr className=''/>
+         
+            <img className="tree-img" data-speed="0.8" src="/tree.png" alt=""/>
 
+     
+            <div className="divider"></div>
 
+            <div className="container">
+               <div className="footer-top-content">
+             
+                  <div className="ft-item">
+                     <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11.262 22.134C11.262 22.134 4 16.018 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10C20 16.018 12.738 22.134 12.738 22.134C12.334 22.506 11.669 22.502 11.262 22.134ZM12 13.5C12.4596 13.5 12.9148 13.4095 13.3394 13.2336C13.764 13.0577 14.1499 12.7999 14.4749 12.4749C14.7999 12.1499 15.0577 11.764 15.2336 11.3394C15.4095 10.9148 15.5 10.4596 15.5 10C15.5 9.54037 15.4095 9.08525 15.2336 8.66061C15.0577 8.23597 14.7999 7.85013 14.4749 7.52513C14.1499 7.20012 13.764 6.94231 13.3394 6.76642C12.9148 6.59053 12.4596 6.5 12 6.5C11.0717 6.5 10.1815 6.86875 9.52513 7.52513C8.86875 8.1815 8.5 9.07174 8.5 10C8.5 10.9283 8.86875 11.8185 9.52513 12.4749C10.1815 13.1313 11.0717 13.5 12 13.5Z"
+                              fill="white" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h4 className="text-white">Location</h4>
+                        <p className="mb-0 text-white">66 Brooklyn golden <br/> street line NY, USA</p>
+                     </div>
+                  </div>
 
-          {/* Links */}
-          <div className='py-[8vw] flex justify-between md:flex-row flex-col'>
+                  <div className="vr-line d-none d-md-block"></div>
 
-            {/* Description */}
-            <div className='basis-1/3'>
-              {/* logo */}
-              <div>
-                <img src={assets.logo_three} alt=''/>
-              </div>
-              <p className='pr-[4vw] md:my-[2vw] my-[6vw] font_18 leading-7 m_font_18'>Targeting consultation Death yet way ndulgence off under folly death 
-                wrote cause her yet way yet wayspite.</p>
-              {/* social media */}
-              <div className='flex md:gap-[1vw] gap-[2vw]'>
-                <div className='md:p-[1vw] p-[3vw] border rounded-full w-fit cursor-pointer hover:bg-[var(--primary)] duration-300'></div>
-                <div className='md:p-[1vw] p-[3vw] border rounded-full w-fit cursor-pointer hover:bg-[var(--primary)] duration-300'></div>
-                <div className='md:p-[1vw] p-[3vw] border rounded-full w-fit cursor-pointer hover:bg-[var(--primary)] duration-300'></div>
-                <div className='md:p-[1vw] p-[3vw] border rounded-full w-fit cursor-pointer hover:bg-[var(--primary)] duration-300'></div>
-              </div>
+                
+                  <div className="ft-item">
+                     <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path
+                              d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                              fill="white" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h4 className="text-white">Phone</h4>
+                        <p className="mb-0 text-white">+869-878-08-68 <br/>+869-878-08-68</p>
+                     </div>
+                  </div>
+
+                  <div className="vr-line d-none d-lg-block"></div>
+
+              
+                  <div className="ft-item">
+                     <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path
+                              d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                              fill="white" />
+                        </svg>
+                     </div>
+                     <div>
+                        <h4 className="text-white">Mail Us</h4>
+                        <p className="mb-0 text-white">touria@support.com <br/>touria@support.com</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+      
+            <div className="divider"></div>
+
+            <div className="container">
+               <div className="border-top"></div>
+            </div>
+
+       
+            <div className="divider"></div>
+
+            <div className="container">
+               <div className="row g-5">
+                
+                  <div className="col-12 col-sm-6 col-lg-4">
+                     <div className="footer-card pe-lg-5">
+                        <a href="#" className="footer-logo">
+                           <img src="./assets/img/core-img/logo-three.png" alt=""/>
+                        </a>
+                        <p className="mb-0 text-white">Targeting consultation Death yet way ndulgence off under folly death
+                           wrote
+                           cause her yet way yet wayspite.</p>
+
+                      
+                        <div className="social-nav">
+                           <a href="#">
+                              <i className="ti ti-brand-facebook"></i>
+                           </a>
+                           <a href="#">
+                              <i className="ti ti-brand-x"></i>
+                           </a>
+                           <a href="#">
+                              <i className="ti ti-brand-linkedin"></i>
+                           </a>
+                           <a href="#">
+                              <i className="ti ti-brand-instagram"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+              
+                  <div className="col-12 col-sm-6 col-lg">
+                     <div className="footer-card">
+                        <h5 className="mb-5 card-title text-white">Quick Links</h5>
+
+                       
+                        <ul className="footer-nav">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About Us</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Blogs</a></li>
+                           <li><a href="#">Tours</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+                 
+                  <div className="col-12 col-sm-6 col-lg">
+                     <div className="footer-card">
+                        <h5 className="mb-5 card-title text-white">Services</h5>
+
+                  
+                        <ul className="footer-nav">
+                           <li><a href="#">Wanderlust Adventures</a></li>
+                           <li><a href="#">Globe Trotters Travel</a></li>
+                           <li><a href="#">Odyssey Travel Services</a></li>
+                           <li><a href="#">Jet Set Journeys</a></li>
+                           <li><a href="#">Dream Destinations Travel</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+        
+                  <div className="col-12 col-sm-6 col-lg">
+                     <div className="footer-card">
+                        <h5 className="mb-5 card-title text-white">Gallery Post</h5>
+
                
-            </div>
+                        <ul className="gallery-post list-unstyled">
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
+                           <li><a href="#"><img src={assets.thirty_six} alt=""/></a></li>
 
-            <div className='basis-2/3 flex justify-between flex-col md:flex-row py-[8vw] md:py-0 gap-[8vw] md:gap-0'>
-            {/* Quick Links */}
-            <div  className='w-full'>
-               <h1  className='font_20 font-bold m_font_20'>Quick Links</h1>
-               <div className='flex flex-col mt-[2vw] gap-[1vw] hvr_l '>
-                <p className=''>Home</p>
-                <p className=''>About Us</p>
-                <p className=''>Services</p>
-                <p className=''>Blogs</p>
-                <p className=''>Tours</p>
+                        </ul>
+                     </div>
+                  </div>
                </div>
             </div>
 
+       
+            <div className="divider"></div>
 
-            {/* Service */}
-            <div  className='w-full'>
-               <h1 className='font_20 font-bold m_font_20'>Services</h1>
-               <div className='flex flex-col mt-[2vw] gap-[1vw] hvr_l'>
-                <p className=''>Wanderlust Adventures</p>
-                <p className=''>Globe Trotters Travel</p>
-                <p className=''>Odyssey Travel Services</p>
-                <p className=''>Jet Set Journeys</p>
-                <p className=''>Dream Destinations Travel</p>
-               </div>               
+
+            <div className="container">
+               <div className="border-top"></div>
             </div>
 
+     
+            <div className="copyright-wrapper">
+               <div className="container">
+                  <div className="row align-items-center">
+             
+                     <div className="col-12 col-md-6">
+                        <p className="mb-3 mb-md-0 copyright">Copyright © <span id="year"></span> <a href="#">Nano Theme</a>
+                           All rights reserved.</p>
+                     </div>
 
-            {/* Gallery posts */}
-            <div  className='w-full'>
-               <h1  className='font_20 font-bold m_font_20'>Gallery Posts</h1>
-               <div  className='flex flex-wrap md:mt-[2vw] mt-[6vw] md:gap-[0.5vw] gap-[2vw] hvr_up' >
-                
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl '/> 
-                </div>
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl'/> 
-                </div>
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl'/> 
-                </div>
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl'/> 
-                </div>
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl'/> 
-                </div>
-                <div className='md:w-[5.5vw] w-[20vw]'>
-                   <img src={assets.sm_frame} alt=''className='rounded-xl'/> 
-                </div>
-                
-
+                   
+                     <div className="col-12 col-md-6">
+                        <div className="footer-bottom-nav">
+                           <a href="#">Privacy Policy</a>
+                           <a href="#">Terms of Service</a>
+                           <a href="#">Legal Agreement</a>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
-            </div>
-
-
-
-
-
-          </div>
-        <hr className=''/>
-        {/* Cpotights */}
-        <div className='flex md:flex-row flex-col justify-between md:py-[2vw] py-[4vw] gap-[4vw] md:gap-0 '>
-           <div>
-             <p>Copyright © 2025 Travel Tiwari All rights reserved.</p>
-           </div>
-
-           <div className='flex gap-[1vw]'>
-             <p className='hover:text-[var(--primary)] cursor-pointer'>Privacy Policies</p>
-             <p className='hover:text-[var(--primary)] cursor-pointer'>Terms of Service</p>
-             <p className='hover:text-[var(--primary)] cursor-pointer'>Legal Agreement</p>
-           </div>
-        </div>          
-
-        </div>
-
+         </div>
     </div>
+    
   )
 }
 
