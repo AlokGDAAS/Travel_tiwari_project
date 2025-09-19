@@ -12,7 +12,7 @@ const Home_about = () => {
             <div class="container">
                <div class="row g-5 align-items-center">
              
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-6 ">
                      <div class="about-thumbnail">
                  
                         <div class="shape fadeInUp" data-delay="0.2">
@@ -46,14 +46,14 @@ const Home_about = () => {
  
                   <div class="col-12 col-lg-6">
                      <div class="about-content ps-md-5">
-                        <div class="section-heading">
+                        <div class="section-heading text-center text-md-start">
                            <span class="sub-title">About Us</span>
                            <h2 class="mb-4">Premier Adventure Travel Company</h2>
                         </div>
 
                         <div class="d-flex flex-column gap-4 mb-5">
         
-                           <div class="about-card-sm d-flex align-items-center gap-3">
+                           <div class="about-card-sm d-flex flex-column flex-md-row  align-items-center gap-3 text-center text-md-start">
                               <div class="icon">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="39" height="40" viewBox="0 0 39 40"
                                     fill="none">
@@ -62,16 +62,17 @@ const Home_about = () => {
                                        fill="#161920" />
                                  </svg>
                               </div>
-                              <div>
-                                 <h4>Exclusive Trip</h4>
-                                 <p class="mb-0">At Express Travel, we believe in the transformative power of travel
+                                 <h4 className="mb-0">Exclusive Trip</h4>
+                                 
+                                 <p className="mb-0 text-center p-3 text-md-start p-md-0">
+                                    At Express Travel, we believe in the transformative power of travel
                                     avid
-                                    explorers ourselves.</p>
-                              </div>
+                                    explorers ourselves
+                                 </p>
                            </div>
 
                     
-                           <div class="about-card-sm d-flex align-items-center gap-3">
+                           <div class="about-card-sm d-flex flex-column flex-md-row  align-items-center gap-3">
                               <div class="icon">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                     fill="none">
@@ -96,18 +97,20 @@ const Home_about = () => {
                                     </defs>
                                  </svg>
                               </div>
-                              <div>
-                                 <h4>Professional Guide</h4>
-                                 <p class="mb-0">At Express Travel, we believe in the transformative power of travel
+                                 <h4 className="mb-0">Professional Guide</h4>
+                                 
+                                 <p className="mb-0 text-center p-3 text-md-start p-md-0">
+                                    At Express Travel, we believe in the transformative power of travel
                                     avid
-                                    explorers ourselves.</p>
-                              </div>
+                                    explorers ourselves
+                                 </p>
                            </div>
                         </div>
-
-                     
-                        <a href="about-us.html" class="btn btn-primary">More About Us <i
-                              class="icon-arrow-right"></i></a>
+              <div className="text-center text-md-start">
+               <a href="about-us.html" className="btn btn-primary">
+                More About Us <i className="icon-arrow-right"></i>
+              </a>
+              </div>
                      </div>
                   </div>
                </div>
