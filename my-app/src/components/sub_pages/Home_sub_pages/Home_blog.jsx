@@ -35,9 +35,10 @@ const Home_blog = () => {
 
             <div className="container">
                <div className="row g-4">
-            
+
+                  
                   <div className="col-12 col-md-5 col-xxl-4">
-                    
+                     {/* verticle card */}
                      <div className="blog-card style-two fadeInUp" data-delay="0.2">
                         <div className="post-img">
                            <img src={assets.twenty_six} alt=""/>
@@ -60,7 +61,8 @@ const Home_blog = () => {
 
                   <div className="col-12 col-md-7 col-xxl-8">
                      <div className="d-flex gap-4 flex-column">
-                       
+                        
+                      {/* horizontal card 1 */}
                         <div className="blog-card fadeInUp" data-delay="0.4">
                            <div className="post-img">
                               <img src={assets.twenty_seven} alt=""/>
@@ -81,6 +83,9 @@ const Home_blog = () => {
                               </div>
                            </div>
                         </div>
+
+
+                     {/* horizontal card 2 */}
 
                         <div className="blog-card fadeInUp" data-delay="0.6">
                            <div className="post-img">

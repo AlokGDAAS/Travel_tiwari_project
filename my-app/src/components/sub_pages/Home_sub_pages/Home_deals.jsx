@@ -117,6 +117,24 @@ const Home_deals = () => {
           slidesPerView={3}
           loop={true}
           className="deals-swiper"
+            breakpoints={{
+                320: { // mobile
+                  slidesPerView: 1.5,
+                  spaceBetween: 10,
+                },
+                640: { // small tablets
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                1024: { // desktops
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1440: { // large screens
+                  slidesPerView: 4,
+                  spaceBetween: 25,
+                },
+              }}
         >
           {/* Slide 1 */}
           <SwiperSlide>

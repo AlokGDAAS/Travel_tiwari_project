@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import Flatpickr from "react-flatpickr";
+
+// Swiper CSS
+import "swiper/css";
+import "swiper/css/navigation";
+
+// Flatpickr CSS
+import "flatpickr/dist/flatpickr.css";
 
 const Home_sub_paje_1 = () => {
+  const [dateRange, setDateRange] = useState([]);
+
   return (
     <div>
-      <div className="hero-section bg-dark">
+      <div className="hero-section ">
         {/* Cloud Image */}
         <div
           className="cloud-img"
@@ -12,32 +24,47 @@ const Home_sub_paje_1 = () => {
 
         {/* Social Icons */}
         <div className="social-icons d-none d-sm-flex">
-          <a href="#"><i className="ti ti-brand-facebook"></i></a>
-          <a href="#"><i className="ti ti-brand-x"></i></a>
-          <a href="#"><i className="ti ti-brand-linkedin"></i></a>
-          <a href="#"><i className="ti ti-brand-instagram"></i></a>
+          <a href="#">
+            <i className="ti ti-brand-facebook"></i>
+          </a>
+          <a href="#">
+            <i className="ti ti-brand-x"></i>
+          </a>
+          <a href="#">
+            <i className="ti ti-brand-linkedin"></i>
+          </a>
+          <a href="#">
+            <i className="ti ti-brand-instagram"></i>
+          </a>
         </div>
 
         {/* Swiper Slider */}
         <div className="swiper background-swiper" id="backgroundSwiper">
-          <div className="swiper-wrapper h-100">
-            <div
-              className="swiper-slide h-100"
-              style={{ backgroundImage: "url('./assets/img/bg-img/1.jpg')" }}
-            ></div>
-            <div
-              className="swiper-slide h-100"
-              style={{ backgroundImage: "url('./assets/img/bg-img/2.jpg')" }}
-            ></div>
-            <div
-              className="swiper-slide h-100"
-              style={{ backgroundImage: "url('./assets/img/bg-img/1.jpg')" }}
-            ></div>
-            <div
-              className="swiper-slide h-100"
-              style={{ backgroundImage: "url('./assets/img/bg-img/2.jpg')" }}
-            ></div>
-          </div>
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            navigation={{
+              nextEl: ".background-button-next",
+              prevEl: ".background-button-prev",
+            }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            slidesPerView={1}
+            className="background-swiper h-100"
+          >
+            <SwiperSlide>
+              <div
+                className="h-100 bg-cover"
+                style={{ backgroundImage: "url('/1.jpg')" }}
+              ></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className="h-100 bg-cover"
+                style={{ backgroundImage: "url('/2.jpg')" }}
+              ></div>
+            </SwiperSlide>
+            {/* Add more slides if needed */}
+          </Swiper>
         </div>
 
         {/* Slider Nav */}
@@ -69,24 +96,23 @@ const Home_sub_paje_1 = () => {
 
                 {/* Search Form */}
                 <div className="hero-search-form fadeInUp" data-delay="0.9">
-                  <form className="row align-items-center g-3 g-xxl-2" action="#">
+                  <form
+                    className="row align-items-center g-3 g-xxl-2"
+                    action="#"
+                  >
                     {/* Location */}
                     <div className="col-12 col-md-6 col-xxl">
                       <div className="search-item d-flex align-items-center gap-3">
                         <div className="icon">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
-                            fill="none"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-geo-alt-fill"
+                            viewBox="0 0 16 16"
                           >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M9.38467 18.4463C9.38467 18.4463 3.33301 13.3496 3.33301 8.33464C3.33301 6.56653 4.03539 4.87083 5.28563 3.62059C6.53587 2.37035 8.23156 1.66797 9.99967 1.66797C11.7678 1.66797 13.4635 2.37035 14.7137 3.62059C15.964 4.87083 16.6663 6.56653 16.6663 8.33464C16.6663 13.3496 10.6147 18.4463 10.6147 18.4463C10.278 18.7563 9.72384 18.753 9.38467 18.4463ZM9.99967 11.2513C10.3827 11.2513 10.762 11.1759 11.1158 11.0293C11.4697 10.8827 11.7912 10.6679 12.0621 10.397C12.3329 10.1262 12.5477 9.80466 12.6943 9.4508C12.8409 9.09693 12.9163 8.71766 12.9163 8.33464C12.9163 7.95161 12.8409 7.57234 12.6943 7.21848C12.5477 6.86461 12.3329 6.54308 12.0621 6.27224C11.7912 6.0014 11.4697 5.78656 11.1158 5.63999C10.762 5.49341 10.3827 5.41797 9.99967 5.41797C9.22613 5.41797 8.48426 5.72526 7.93728 6.27224C7.3903 6.81922 7.08301 7.56109 7.08301 8.33464C7.08301 9.10818 7.3903 9.85005 7.93728 10.397C8.48426 10.944 9.22613 11.2513 9.99967 11.2513Z"
-                              fill="#767676"
-                            />
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                           </svg>
                         </div>
                         <div className="form-group">
@@ -104,17 +130,26 @@ const Home_sub_paje_1 = () => {
                             <option value="madrid">Madrid</option>
                             <option value="tokyo">Tokyo</option>
                             <option value="rome">Rome</option>
-                            {/* ... other options */}
                           </select>
                         </div>
                       </div>
                     </div>
 
-                    {/* Date Picker */}
+                    {/* Date Picker (Flatpickr) */}
                     <div className="col-12 col-md-6 col-xxl">
                       <div className="search-item d-flex align-items-center gap-3">
                         <div className="icon">
-                          {/* Calendar SVG */}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-calendar4-week"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                            <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+                          </svg>
                         </div>
                         <div className="form-group d-flex align-items-end">
                           <div>
@@ -124,12 +159,13 @@ const Home_sub_paje_1 = () => {
                             >
                               Time Period
                             </label>
-                            <input
-                              type="text"
+                            <Flatpickr
                               id="time-range-picker"
                               className="time-range-picker"
                               placeholder="Select date range"
-                              readOnly
+                              options={{ mode: "range", dateFormat: "Y-m-d" }}
+                              value={dateRange}
+                              onChange={setDateRange}
                             />
                           </div>
                           <i className="ti ti-chevron-down me-5"></i>
@@ -140,7 +176,21 @@ const Home_sub_paje_1 = () => {
                     {/* Tour Type */}
                     <div className="col-12 col-md-6 col-xxl">
                       <div className="search-item d-flex align-items-center gap-3">
-                        <div className="icon">{/* SVG */}</div>
+                        <div className="icon">
+                          {" "}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <path
+                              d="M4.16699 18.3346V1.66797H5.83366V3.33464H17.5003L15.8337 7.5013L17.5003 11.668H5.83366V18.3346H4.16699ZM10.417 9.16797C10.8753 9.16797 11.2678 9.00491 11.5945 8.6788C11.9212 8.35269 12.0842 7.96019 12.0837 7.5013C12.0831 7.04241 11.92 6.65019 11.5945 6.32464C11.2689 5.99908 10.8764 5.83575 10.417 5.83464C9.95755 5.83352 9.56533 5.99686 9.24033 6.32464C8.91533 6.65241 8.75199 7.04464 8.75033 7.5013C8.74866 7.95797 8.91199 8.35047 9.24033 8.6788C9.56866 9.00714 9.96088 9.17019 10.417 9.16797ZM5.83366 10.0013H15.042L14.042 7.5013L15.042 5.0013H5.83366V10.0013Z"
+                              fill="#767676"
+                            />
+                          </svg>
+                        </div>
                         <div className="form-group">
                           <label htmlFor="tour-type" className="form-label">
                             Tour Type
@@ -152,7 +202,9 @@ const Home_sub_paje_1 = () => {
                             defaultValue="family-tour"
                           >
                             <option value="family-tour">Family Tour</option>
-                            <option value="adventure-tour">Adventure Tour</option>
+                            <option value="adventure-tour">
+                              Adventure Tour
+                            </option>
                             <option value="solo-tour">Solo Tour</option>
                           </select>
                         </div>
