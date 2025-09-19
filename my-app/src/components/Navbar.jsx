@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -102,7 +103,7 @@ const Navbar = () => {
             <div className="collapse justify-content-xl-end navbar-collapse" id="touriaNav">
                <ul className="navbar-nav align-items-xl-center navbar-nav-scroll">
                   <li className="touria-dd">
-                     <a href="#">Home <i className="ti ti-chevron-down"></i></a>
+                     <Link to="/">Home <i className="ti ti-chevron-down"></i></Link>
                      <ul className="touria-dd-menu">
                         <li>
                            <a href="index.html">Tour Booking</a>
@@ -131,21 +132,21 @@ const Navbar = () => {
                      <a href="#">Tours <i className="ti ti-chevron-down"></i></a>
                      <ul className="touria-dd-menu">
                         <li>
-                           <a href="tour-list.html">Tour List</a>
+                           <Link to="tour-list">Tour List</Link>
                         </li>
                         <li>
-                           <a href="tour-details.html">Tour Details</a>
+                           <Link to="tour-details">Tour Details</Link>
                         </li>
                      </ul>
                   </li>
                   <li className="touria-dd">
-                     <a href="#">Destinations <i className="ti ti-chevron-down"></i></a>
+                     <a>Destinations <i className="ti ti-chevron-down"></i></a>
                      <ul className="touria-dd-menu">
                         <li>
-                           <a href="destination.html">Destination</a>
+                           <Link to="destination">Destination</Link>
                         </li>
                         <li>
-                           <a href="destination-details.html">Destination Details</a>
+                           <Link to="/destination-details">Destination Details</Link>
                         </li>
                      </ul>
                   </li>

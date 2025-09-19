@@ -51,6 +51,16 @@ import thirty_three from './img/bg-img/33.jpg'
 import thirty_four from './img/bg-img/34.jpg'
 import thirty_five from './img/bg-img/35.jpg'
 import thirty_six from './img/bg-img/36.jpg'
+import ninty_eight from './img/bg-img/98.jpg'
+import ninty_nine from './img/bg-img/99.jpg'
+import hundred from './img/bg-img/100.jpg'
+import hundred_three_three from './img/bg-img/133.jpg'
+import hundred_three_four from './img/bg-img/134.jpg'
+import hundred_three_five from './img/bg-img/135.jpg'
+import hundred_three_six from './img/bg-img/136.jpg'
+import hundred_three_seven from './img/bg-img/137.jpg'
+import hundred_three_eight from './img/bg-img/138.jpg'
+import hundred_three_nine from './img/bg-img/139.jpg'
 
 
 
@@ -107,4 +117,14 @@ export const assets = {
     thirty_four,
     thirty_five,
     thirty_six,
+    ninty_eight,
+    ninty_nine,
+    hundred,
+    hundred_three_three,
+    hundred_three_four,
+    hundred_three_five,
+    hundred_three_six,
+    hundred_three_seven,
+    hundred_three_eight,
+    hundred_three_nine,
 }
