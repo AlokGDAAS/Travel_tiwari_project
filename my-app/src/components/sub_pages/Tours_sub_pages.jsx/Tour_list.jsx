@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../../../assets/assets";
 import { Link } from "react-router-dom";
+import PriceSlider from "../../utils/PriceSlider";
 
 const Tour_list = () => {
   return (
@@ -91,10 +92,10 @@ const Tour_list = () => {
                         </div>
 
                 
-                        <div className="sidebar-widget">
+                        <div className="">
                            <h4 className="widget-title mb-5">Price</h4>
                        
-                           <div id="range-slider-price"></div>
+                           <PriceSlider/>
                         </div>
 
                   

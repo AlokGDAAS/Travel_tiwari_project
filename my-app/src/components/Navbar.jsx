@@ -212,8 +212,10 @@ const Navbar = () => {
                      </ul>
                   </li>
                   <li className="touria-dd">
-                     <a href="#">Blog <i className="ti ti-chevron-down"></i></a>
-                     <ul className="touria-dd-menu">
+                     <Link to="/blog-list">Blog 
+                        {/* <i className="ti ti-chevron-down"></i> */}
+                        </Link>
+                     {/* <ul className="touria-dd-menu">
                         <li>
                            <a href="blog-list.html">Blog List</a>
                         </li>
@@ -223,10 +225,10 @@ const Navbar = () => {
                         <li>
                            <a href="blog-details.html">Blog Details</a>
                         </li>
-                     </ul>
+                     </ul> */}
                   </li>
                   <li>
-                     <a href="contact.html">Contact</a>
+                     <Link to="/contact-us">Contact</Link>
                   </li>
                </ul>
 

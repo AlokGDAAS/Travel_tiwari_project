@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from 'react-router-dom';
 
 
 const Destination_details = () => {
@@ -19,7 +20,7 @@ const Destination_details = () => {
                   <div className="divider"></div>
                   <h2>Destination Details</h2>
                   <ul className="list-unstyled">
-                     <li><a href="index.html">Home</a></li>
+                     <li><Link to="/">Home</Link></li>
                      <li>Destination Details</li>
                   </ul>
                </div>

@@ -54,6 +54,7 @@ import thirty_six from './img/bg-img/36.jpg'
 import ninty_eight from './img/bg-img/98.jpg'
 import ninty_nine from './img/bg-img/99.jpg'
 import hundred from './img/bg-img/100.jpg'
+import hundred_three_one from './img/bg-img/131.jpg'
 import hundred_three_three from './img/bg-img/133.jpg'
 import hundred_three_four from './img/bg-img/134.jpg'
 import hundred_three_five from './img/bg-img/135.jpg'
@@ -61,6 +62,17 @@ import hundred_three_six from './img/bg-img/136.jpg'
 import hundred_three_seven from './img/bg-img/137.jpg'
 import hundred_three_eight from './img/bg-img/138.jpg'
 import hundred_three_nine from './img/bg-img/139.jpg'
+import hundred_one_two from './img/bg-img/112.jpg'
+import hundred_one_three from './img/bg-img/113.jpg'
+import hundred_one_four from './img/bg-img/114.jpg'
+import hundred_two_four from './img/bg-img/124.jpg'
+import hundred_two_five from './img/bg-img/125.jpg'
+import hundred_two_six from './img/bg-img/126.jpg'
+import hundred_two_seven from './img/bg-img/127.jpg'
+import hundred_two_eight from './img/bg-img/128.jpg'
+import hundred_two_nine from './img/bg-img/129.jpg'
+import hundred_three_zero from './img/bg-img/130.jpg'
+
 
 
 
@@ -71,7 +83,6 @@ export const assets = {
     md_frame_1,sm_frame_1,
     md_rectangle_frame_1,
     shape,
-    md_frame_vertical_1,
     i_frame_img,
     logo_three,
     sm_frame,
@@ -120,6 +131,9 @@ export const assets = {
     ninty_eight,
     ninty_nine,
     hundred,
+    hundred_one_two,
+    hundred_one_three,
+    hundred_one_four,
     hundred_three_three,
     hundred_three_four,
     hundred_three_five,
@@ -127,4 +141,13 @@ export const assets = {
     hundred_three_seven,
     hundred_three_eight,
     hundred_three_nine,
+    hundred_two_four,
+    hundred_two_five,
+    hundred_two_six,
+    hundred_two_seven,
+    hundred_two_eight,
+    hundred_two_nine,
+    hundred_three_zero,
+    hundred_three_one,
+  
 }

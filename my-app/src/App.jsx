@@ -8,6 +8,9 @@ import Destination_details from "./components/sub_pages/Destinations_sub_pages/D
 import Book_now from "./components/bookings/Book_now";
 import Tour_list from "./components/sub_pages/Tours_sub_pages.jsx/Tour_list";
 import Tour_details from "./components/sub_pages/Tours_sub_pages.jsx/Tour_details";
+import ContactUs from "./components/pages/ContactUs";
+import Blog_list from "./components/sub_pages/Blog_sub_pages/Blog_list";
+import Blog_details from "./components/sub_pages/Blog_sub_pages/Blog_details";
 
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
             <Route path="/book-now" element={<Book_now />}/>
             <Route path="/tour-list" element={<Tour_list />}/>
             <Route path="/tour-details" element={<Tour_details />}/>            
+            <Route path="/blog-list" element={<Blog_list />}/>            
+            <Route path="/blog-details" element={<Blog_details />}/>            
+            <Route path="/contact-us" element={<ContactUs />}/>            
           </Routes>          
           <Footer />
         </div>
