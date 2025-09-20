@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import noUiSlider from "nouislider";
 import "nouislider/dist/nouislider.css";
 
-const PriceSlider = () => {
+const PriceSlider = ({start ,end , max,head,symbol}) => {
   const sliderRef = useRef(null);
   const [range, setRange] = useState([1000, 5000]);
 
@@ -15,11 +15,11 @@ const PriceSlider = () => {
     }
 
     noUiSlider.create(sliderRef.current, {
-      start: [1000, 5000],
+      start: [start, end],
       connect: true,
       range: {
         min: 0,
-        max: 10000,
+        max: max,
       },
     });
 
@@ -38,11 +38,11 @@ const PriceSlider = () => {
 
   return (
     <div className="sidebar-widget">
-      <h4 className="widget-title mb-3">Price</h4>
+      <h4 className="widget-title mb-3">{head}</h4>
       <div ref={sliderRef}></div>
       <div className="mt-2 d-flex justify-content-between">
-        <div className="badge bg-primary me-2">₹{range[0]}</div>
-        <div className="badge bg-success">₹{range[1]}</div>
+        <div className="badge bg-primary me-2">{symbol}{range[0]}</div>
+        <div className="badge bg-success">{symbol}{range[1]}</div>
       </div>
     </div>
   );

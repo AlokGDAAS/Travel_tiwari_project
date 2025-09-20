@@ -5,6 +5,22 @@ import PriceSlider from "../../utils/PriceSlider";
 import BreadCrumb from "../../utils/BreadCrumb";
 
 const Tour_list = () => {
+
+   const duration ={
+      start:2,
+      end:9,
+      max:15,
+      head:"Duration",
+      symbol:""
+   }
+
+   const price ={
+      start:1000,
+      end:5000,
+      max:15000,
+      head:"Price",
+      symbol:"₹"
+   }
   return (
     <div>
 
@@ -78,9 +94,9 @@ const Tour_list = () => {
 
                 
                         <div className="">
-                           <h4 className="widget-title mb-5">Price</h4>
+                           
                        
-                           <PriceSlider/>
+                           <PriceSlider start={price.start} end={price.end} max={price.max} head={price.head} symbol={price.symbol}/>
                         </div>
 
                   
@@ -135,10 +151,10 @@ const Tour_list = () => {
                         </div>
 
                
-                        <div className="sidebar-widget">
-                           <h4 className="widget-title mb-5">Duration</h4>
-                      
-                           <div id="range-slider-duration"></div>
+                        <div className="">
+                           
+                       
+                           <PriceSlider start={duration.start} end={duration.end} max={duration.max} head={duration.head} symbol={duration.symbol}/>
                         </div>
 
                       
