@@ -103,7 +103,9 @@ const Navbar = () => {
             <div className="collapse justify-content-xl-end navbar-collapse" id="touriaNav">
                <ul className="navbar-nav align-items-xl-center navbar-nav-scroll">
                   <li className="touria-dd">
-                     <Link to="/">Home <i className="ti ti-chevron-down"></i></Link>
+                     <Link to="/">Home
+                      {/* <i className="ti ti-chevron-down"></i> */}
+                     </Link>
                      <ul className="touria-dd-menu">
                         <li>
                            <a href="index.html">Tour Booking</a>
@@ -129,7 +131,9 @@ const Navbar = () => {
                      </ul>
                   </li>
                   <li className="touria-dd">
-                     <a href="#">Tours <i className="ti ti-chevron-down"></i></a>
+                     <a href="#">Tours 
+                        {/* <i className="ti ti-chevron-down"></i> */}
+                        </a>
                      <ul className="touria-dd-menu">
                         <li>
                            <Link to="tour-list">Tour List</Link>
@@ -140,7 +144,9 @@ const Navbar = () => {
                      </ul>
                   </li>
                   <li className="touria-dd">
-                     <a>Destinations <i className="ti ti-chevron-down"></i></a>
+                     <a>Destinations 
+                        {/* <i className="ti ti-chevron-down"></i> */}
+                        </a>
                      <ul className="touria-dd-menu">
                         <li>
                            <Link to="destination">Destination</Link>
@@ -157,7 +163,9 @@ const Navbar = () => {
                            <Link to="/about-us">About Us</Link>
                         </li>
                         <li className="touria-dd">
-                           <a href="#">Destinations <i className="ti ti-chevron-right"></i></a>
+                           <a href="#">Destinations 
+                              {/* <i className="ti ti-chevron-right"></i> */}
+                              </a>
                            <ul className="touria-dd-menu">
                               <li>
                                  <a href="destination.html">Destination</a>

@@ -9,14 +9,14 @@ import Home_contact from '../sub_pages/Home_sub_pages/Home_contact'
 import Home_follow_insta from '../sub_pages/Home_sub_pages/Home_follow_insta'
 import Home_sub_page_first from '../sub_pages/Home_sub_pages/Home_sub_page_first'
 import Home_blog_re from '../sub_pages/Home_sub_pages/Home_blog_re'
-import Test from '../Test'
+// import Test from '../Test'
 import Home_testimonial_re from '../sub_pages/Home_sub_pages/Home_testimonial_re'
 
 
 const Home = () => {
   return (
     <div>
-      <Home_sub_page_first/>
+      {/* <Home_sub_page_first/> */}
         <Home_sub_paje_1/>
         <Home_about/>
         <Home_feature/>
@@ -27,7 +27,7 @@ const Home = () => {
         <Home_contact/>
         <Home_blog_re/>
         <Home_follow_insta/>
-        <Test/>
+        {/* <Test/> */}
     
         
  

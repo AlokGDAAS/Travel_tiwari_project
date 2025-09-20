@@ -163,7 +163,7 @@ const Home_sub_paje_1 = () => {
                               id="time-range-picker"
                               className="time-range-picker"
                               placeholder="Select date range"
-                              options={{ mode: "range", dateFormat: "Y-m-d" }}
+                              options={{ mode: "range", dateFormat: "M-d" }}
                               value={dateRange}
                               onChange={setDateRange}
                             />
