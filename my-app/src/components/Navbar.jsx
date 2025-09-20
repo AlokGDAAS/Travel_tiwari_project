@@ -154,7 +154,7 @@ const Navbar = () => {
                      <a href="#">Pages <i className="ti ti-chevron-down"></i></a>
                      <ul className="touria-dd-menu">
                         <li className="touria-dd">
-                           <a href="about-us.html">About Us</a>
+                           <Link to="/about-us">About Us</Link>
                         </li>
                         <li className="touria-dd">
                            <a href="#">Destinations <i className="ti ti-chevron-right"></i></a>

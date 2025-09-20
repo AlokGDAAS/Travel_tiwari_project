@@ -8,6 +8,7 @@ import { assets } from '../../../assets/assets'
 import { Link } from 'react-router-dom'
 import I_frame from "../../utils/I_frame";
 import { useState } from "react";
+import BreadCrumb from "../../utils/BreadCrumb";
 
 const Card_1 = () => {
   return (
@@ -40,23 +41,10 @@ const Destination = () => {
       <div id="smooth-content">
 
         
-         <div className="breadcrumb-section bg-img jarallax"
-            style={{backgroundImage:"url(/97.jpg)"}}>
-            <div className="container">
-           
-               <div className="breadcrumb-content">
-                  <div className="divider"></div>
-                  <h2>Destination</h2>
-                  <ul className="list-unstyled">
-                     <li><Link to="/">Home</Link></li>
-                     <li>Destination</li>
-                  </ul>
-               </div>
-            </div>
-
-  
-            <div className="divider"></div>
-         </div>
+      {/* Breadcrumb Section  */}
+      <div>
+       <BreadCrumb head="Destination" link="Home"/>
+      </div>
 
         
          <section className="featured-destination bg-secondary">

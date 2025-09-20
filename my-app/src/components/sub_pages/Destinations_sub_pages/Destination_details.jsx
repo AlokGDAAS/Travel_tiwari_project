@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from 'react-router-dom';
+import BreadCrumb from '../../utils/BreadCrumb';
 
 
 const Destination_details = () => {
@@ -12,23 +13,10 @@ const Destination_details = () => {
     <div>
 
              
-         <div className="breadcrumb-section bg-img jarallax"
-            style={{backgroundImage:"url(/97.jpg)"}}>
-            <div className="container">
-        
-               <div className="breadcrumb-content">
-                  <div className="divider"></div>
-                  <h2>Destination Details</h2>
-                  <ul className="list-unstyled">
-                     <li><Link to="/">Home</Link></li>
-                     <li>Destination Details</li>
-                  </ul>
-               </div>
-            </div>
-
-       
-            <div className="divider"></div>
-         </div>
+      {/* Breadcrumb Section  */}
+      <div>
+       <BreadCrumb head="Destination Details" link="Home"/>
+      </div>
 
              
          <div className="destination-details-section">

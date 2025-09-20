@@ -11,6 +11,7 @@ import Tour_details from "./components/sub_pages/Tours_sub_pages.jsx/Tour_detail
 import ContactUs from "./components/pages/ContactUs";
 import Blog_list from "./components/sub_pages/Blog_sub_pages/Blog_list";
 import Blog_details from "./components/sub_pages/Blog_sub_pages/Blog_details";
+import AboutUs from "./components/pages/AboutUs";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/tour-details" element={<Tour_details />}/>            
             <Route path="/blog-list" element={<Blog_list />}/>            
             <Route path="/blog-details" element={<Blog_details />}/>            
+            <Route path="/about-us" element={<AboutUs />}/>            
             <Route path="/contact-us" element={<ContactUs />}/>            
           </Routes>          
           <Footer />

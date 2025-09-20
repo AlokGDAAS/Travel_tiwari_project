@@ -4,7 +4,6 @@ import bottom_cloud from './img/core-img/bottom_cloud.png'
 import cloud from './img/core-img/cloud.png'
 import md_frame_1 from './img/bg-img/7.jpg'
 import sm_frame_1 from './img/bg-img/9.jpg'
-import eight from './img/bg-img/8.jpg'
 import sm_frame from './img/bg-img/sm_frame.jpg'
 import md_rectangle_frame_1 from './img/bg-img/13.jpg'
 import md_frame_vertical_1 from './img/bg-img/22.jpg'
@@ -24,6 +23,9 @@ import quoter_icon from './img/core-img/quoter_icon.png'
 import trolley from './img/core-img/trolley.svg'
 import plane from './img/core-img/plane.svg'
 import news_update_1 from './img/bg-img/116.jpg'
+import seven from './img/bg-img/7.jpg'
+import eight from './img/bg-img/8.jpg'
+import nine from './img/bg-img/9.jpg'
 import ten from './img/bg-img/10.jpg'
 import eleven from './img/bg-img/11.jpg'
 import twelve from './img/bg-img/12.jpg'
@@ -51,6 +53,19 @@ import thirty_three from './img/bg-img/33.jpg'
 import thirty_four from './img/bg-img/34.jpg'
 import thirty_five from './img/bg-img/35.jpg'
 import thirty_six from './img/bg-img/36.jpg'
+import sixty_four from './img/bg-img/64.jpg'
+import sixty_five from './img/bg-img/65.jpg'
+import sixty_six from './img/bg-img/66.jpg'
+import sixty_seven from './img/bg-img/67.jpg'
+import eighty_eight from './img/bg-img/88.jpg'
+import eighty_nine from './img/bg-img/89.jpg'
+import ninety from './img/bg-img/90.jpg'
+import ninety_one from './img/bg-img/91.jpg'
+import ninety_two from './img/bg-img/92.jpg'
+import ninety_three from './img/bg-img/93.jpg'
+import ninety_four from './img/bg-img/94.jpg'
+import ninety_five from './img/bg-img/95.jpg'
+
 import ninty_eight from './img/bg-img/98.jpg'
 import ninty_nine from './img/bg-img/99.jpg'
 import hundred from './img/bg-img/100.jpg'
@@ -96,11 +111,13 @@ export const assets = {
     testimonial_card,
     testimonial_card_2,
     quoter_icon,
-    news_update_1,
-    eight,
+    news_update_1,   
     shape2,
     trolley,
     plane,
+    seven,
+    eight,
+    nine,
     ten,
     eleven,
     twelve,
@@ -131,6 +148,23 @@ export const assets = {
     ninty_eight,
     ninty_nine,
     hundred,
+    sixty_four,
+    sixty_five,
+    sixty_six,
+    sixty_seven,
+
+    eighty_eight,
+    eighty_nine,
+    ninety,
+    ninety_one,
+    ninety_two,
+    ninety_three,
+    ninety_four,
+    ninety_five,
+    
+    
+    
+
     hundred_one_two,
     hundred_one_three,
     hundred_one_four,

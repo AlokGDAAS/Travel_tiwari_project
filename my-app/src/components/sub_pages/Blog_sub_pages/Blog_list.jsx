@@ -1,28 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { assets } from '../../../assets/assets'
+import BreadCrumb from '../../utils/BreadCrumb'
 
 const Blog_list = () => {
   return (
     <div>
 
-                 <div className="breadcrumb-section bg-img jarallax"
-            style={{backgroundImage:"url(/97.jpg)"}}>
-            <div className="container">
-        
-               <div className="breadcrumb-content">
-                  <div className="divider"></div>
-                  <h2>Blog List</h2>
-                  <ul className="list-unstyled">
-                     <li><Link to="/">Home</Link></li>
-                     <li>Blog List</li>
-                  </ul>
-               </div>
-            </div>
-
-       
-            <div className="divider"></div>
-         </div>
+      {/* Breadcrumb Section  */}
+      <div>
+       <BreadCrumb head="Blog List" link="Home"/>
+      </div>
 
 
                 

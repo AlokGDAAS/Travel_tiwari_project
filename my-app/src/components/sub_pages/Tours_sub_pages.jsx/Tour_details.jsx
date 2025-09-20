@@ -5,30 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import BreadCrumb from '../../utils/BreadCrumb';
 
 const Tour_details = () => {
   return (
     <div>
-              {/* Breadcrumb Section  */}
-      <div
-        className="breadcrumb-section bg-img jarallax"
-          style={{backgroundImage:"url(/97.jpg)"}}>
-      
-        <div className="container">
-          {/* Breadcrumb Content */}
-          <div className="breadcrumb-content">
-            <div className="divider"></div>
-            <h2>Tour Details</h2>
-            <ul className="list-unstyled">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>Tour Details</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="divider"></div>
+      {/* Breadcrumb Section  */}
+      <div>
+       <BreadCrumb head="Tour Details" link="Home"/>
       </div>
 
       {/* ------------------------------------------------------- */}

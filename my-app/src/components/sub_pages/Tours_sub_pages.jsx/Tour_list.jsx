@@ -2,30 +2,15 @@ import React from "react";
 import { assets } from "../../../assets/assets";
 import { Link } from "react-router-dom";
 import PriceSlider from "../../utils/PriceSlider";
+import BreadCrumb from "../../utils/BreadCrumb";
 
 const Tour_list = () => {
   return (
     <div>
-      {/* Breadcrumb Section  */}
-      <div
-        className="breadcrumb-section bg-img jarallax"
-          style={{backgroundImage:"url(/97.jpg)"}}>
-      
-        <div className="container">
-          {/* Breadcrumb Content */}
-          <div className="breadcrumb-content">
-            <div className="divider"></div>
-            <h2>Tour List</h2>
-            <ul className="list-unstyled">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>Tour List</li>
-            </ul>
-          </div>
-        </div>
 
-        <div className="divider"></div>
+      {/* Breadcrumb Section  */}
+      <div>
+       <BreadCrumb head="Tour List" link="Home"/>
       </div>
   
   {/* --------------------------------------------- */}
